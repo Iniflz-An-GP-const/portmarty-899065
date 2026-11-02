@@ -22,7 +22,7 @@ class ProductRepository {
             ),
             category = ProductCategory.SEATING,
             price = 249.00,
-            imageUrl = "https://images.unsplash.com/photo-1567016432779-094069958ea5",
+            imageUrl = "https://images.unsplash.com/photo-1763279934323-edb3735f6a6e?w=800&q=80",
         ),
         Product(
             id = 2,
@@ -38,7 +38,7 @@ class ProductRepository {
             ),
             category = ProductCategory.SEATING,
             price = 129.00,
-            imageUrl = "https://images.unsplash.com/photo-1598300056393-4aac492f4344",
+            imageUrl = "https://images.unsplash.com/photo-1730373451883-45a448eb9bfc?w=800&q=80",
         ),
         Product(
             id = 3,
@@ -54,7 +54,7 @@ class ProductRepository {
             ),
             category = ProductCategory.TABLES,
             price = 189.00,
-            imageUrl = "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc",
+            imageUrl = "https://images.unsplash.com/photo-1758565811033-84d1365000c6?w=800&q=80",
         ),
         Product(
             id = 4,
@@ -70,7 +70,7 @@ class ProductRepository {
             ),
             category = ProductCategory.TABLES,
             price = 599.00,
-            imageUrl = "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7",
+            imageUrl = "https://images.unsplash.com/photo-1758977404039-6e834be8eca8?w=800&q=80",
         ),
         Product(
             id = 5,
@@ -86,7 +86,7 @@ class ProductRepository {
             ),
             category = ProductCategory.STORAGE,
             price = 279.00,
-            imageUrl = "https://images.unsplash.com/photo-1594620302200-9a762244a156",
+            imageUrl = "https://images.unsplash.com/photo-1603058817990-2b9a9abbce86?w=800&q=80",
         ),
         Product(
             id = 6,
@@ -102,7 +102,7 @@ class ProductRepository {
             ),
             category = ProductCategory.STORAGE,
             price = 449.00,
-            imageUrl = "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+            imageUrl = "https://images.unsplash.com/photo-1767963758785-b9def36c13e3?w=800&q=80",
         ),
         Product(
             id = 7,
@@ -118,7 +118,7 @@ class ProductRepository {
             ),
             category = ProductCategory.LIGHTING,
             price = 139.00,
-            imageUrl = "https://images.unsplash.com/photo-1507473885765-e6ed057f782c",
+            imageUrl = "https://images.unsplash.com/photo-1675767528117-963ce219b52a?w=800&q=80",
         ),
         Product(
             id = 8,
@@ -134,7 +134,7 @@ class ProductRepository {
             ),
             category = ProductCategory.LIGHTING,
             price = 79.00,
-            imageUrl = "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15",
+            imageUrl = "https://images.unsplash.com/photo-1580130281320-0ef0754f2bf7?w=800&q=80",
         ),
         Product(
             id = 9,
@@ -150,7 +150,7 @@ class ProductRepository {
             ),
             category = ProductCategory.DECOR,
             price = 49.00,
-            imageUrl = "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+            imageUrl = "https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?w=800&q=80",
         ),
         Product(
             id = 10,
@@ -166,7 +166,7 @@ class ProductRepository {
             ),
             category = ProductCategory.DECOR,
             price = 159.00,
-            imageUrl = "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6",
+            imageUrl = "https://images.unsplash.com/photo-1618220252344-8ec99ec624b1?w=800&q=80",
         ),
     )
 

@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,6 +19,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
@@ -27,8 +29,8 @@ import archive.portmarty.connect.R
 import archive.portmarty.connect.ui.theme.LocalDimens
 import kotlinx.coroutines.launch
 
-private const val LOGO_ANIMATION_DURATION_MS = 1600
-private const val TITLE_ANIMATION_DURATION_MS = 900
+private const val LOGO_ANIMATION_DURATION_MS = 700
+private const val TITLE_ANIMATION_DURATION_MS = 500
 
 private val LogoSize = 160.dp
 private val TitleRise = 12.dp
@@ -56,6 +58,7 @@ fun SplashContent(
     Box(
         modifier = modifier
             .fillMaxSize()
+            .clip(RoundedCornerShape(48.dp))
             .background(MaterialTheme.colorScheme.background),
         contentAlignment = Alignment.Center,
     ) {
@@ -65,6 +68,7 @@ fun SplashContent(
                 contentDescription = stringResource(R.string.avmct_app_logo_description),
                 modifier = Modifier
                     .size(LogoSize)
+                    .clip(RoundedCornerShape(40.dp))
                     .scale(scale.value)
                     .alpha(logoAlpha.value),
             )

@@ -70,7 +70,7 @@
     <string name="button_confirm_order_label">تأكيد الطلب</string>
     <string name="checkout_dialog_title">شكرا لطلبك!</string>
     <string name="checkout_success_message">لقد تم تقديم طلبك بنجاح. من فضلك انتظر؛ سيقوم فريقنا بالاتصال بك قريبا.</string>
-    <string name="checkout_dialog_confirm">تم</string>
+    <string name="checkout_dialog_confirm">الانتقال إلى طلباتي</string>
     <string name="settings_screen_app_label">التطبيق</string>
     <string name="settings_screen_version_label">الإصدار</string>
     <string name="settings_screen_company_label">الشركة</string>
@@ -79,4 +79,5 @@
     <string name="clear_card_dialog_text">هل أنت متأكد أنك تريد إزالة كافة العناصر من سلة التسوق الخاصة بك؟</string>
     <string name="button_confirm_clear_cart">تأكيد</string>
     <string name="button_cancel_clear_cart">يلغي</string>
+    <string name="settings_screen_copyright">\u200E© %1$d %2$s\u200E. جميع الحقوق محفوظة.</string>
 </resources>

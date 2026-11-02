@@ -70,7 +70,7 @@
     <string name="button_confirm_order_label">Bestellung bestätigen</string>
     <string name="checkout_dialog_title">Vielen Dank für Ihre Bestellung!</string>
     <string name="checkout_success_message">Ihre Bestellung wurde erfolgreich aufgegeben. Bitte warten Sie; Unser Team wird sich in Kürze mit Ihnen in Verbindung setzen.</string>
-    <string name="checkout_dialog_confirm">Fertig</string>
+    <string name="checkout_dialog_confirm">Zu meinen Bestellungen</string>
     <string name="settings_screen_app_label">Bewerbung</string>
     <string name="settings_screen_version_label">Version</string>
     <string name="settings_screen_company_label">Unternehmen</string>
@@ -79,4 +79,5 @@
     <string name="clear_card_dialog_text">Sind Sie sicher, dass Sie alle Artikel aus Ihrem Warenkorb entfernen möchten?</string>
     <string name="button_confirm_clear_cart">Bestätigen</string>
     <string name="button_cancel_clear_cart">Stornieren</string>
+    <string name="settings_screen_copyright">© %1$d %2$s. Alle Rechte vorbehalten.</string>
 </resources>

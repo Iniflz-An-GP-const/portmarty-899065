@@ -10,7 +10,7 @@ import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
-private const val LightBackgroundLuminance = 0.5f
+private const val LightBackgroundLuminance = 0.179f
 
 fun Color.isLight(): Boolean = luminance() > LightBackgroundLuminance
 
@@ -20,7 +20,8 @@ fun StatusBarIconsFor(backgroundColor: Color) {
     if (view.isInEditMode) return
 
     val window = view.context.findActivity()?.window ?: return
-    val useDarkIcons = backgroundColor.isLight()
+    // The status bar strip is always drawn in Primary, so its icons follow Primary.
+    val useDarkIcons = Primary.isLight()
 
     SideEffect {
         WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = useDarkIcons

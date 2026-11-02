@@ -1,5 +1,6 @@
 package archive.portmarty.connect.ui.composable.screen.cart.card
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -8,6 +9,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -25,6 +27,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import archive.portmarty.connect.R
@@ -38,6 +41,7 @@ import archive.portmarty.connect.ui.theme.imageBorder
 private val ImageSize = 56.dp
 private val StepperButtonSize = 32.dp
 private val StepperIconSize = 16.dp
+private val CounterMinWidth = 24.dp
 
 private const val LAST_ITEM_QUANTITY = 1
 
@@ -80,6 +84,7 @@ fun CartItem(
                     text = item.productTitle,
                     color = MaterialTheme.colorScheme.onSurface,
                     style = MaterialTheme.typography.titleSmall,
+                    minLines = 2,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                 )
@@ -103,7 +108,10 @@ fun CartItem(
                 contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
                 border = controlBorderStroke(),
             ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
+                Row(
+                    modifier = Modifier.height(StepperButtonSize),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
                     IconButton(
                         onClick = if (isLastItem) onDeleteClick else onMinusClick,
                         modifier = Modifier.size(StepperButtonSize),
@@ -130,10 +138,16 @@ fun CartItem(
                         )
                     }
 
-                    Text(
-                        text = item.quantity.toString(),
-                        style = MaterialTheme.typography.labelLarge,
-                    )
+                    Box(
+                        modifier = Modifier.widthIn(min = CounterMinWidth),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Text(
+                            text = item.quantity.toString(),
+                            style = MaterialTheme.typography.labelLarge,
+                            textAlign = TextAlign.Center,
+                        )
+                    }
 
                     IconButton(
                         onClick = onPlusClick,

@@ -42,7 +42,7 @@ fun AVMCTProductDetailsScreen(
 private fun ProductDetailsScreenContent(
     productState: DataUiState<Product>,
     modifier: Modifier = Modifier,
-    onAddToCart: () -> Unit,
+    onAddToCart: (quantity: Int) -> Unit,
 ) {
     Column(modifier = modifier.padding(bottom = LocalContentBottomPadding.current)) {
 

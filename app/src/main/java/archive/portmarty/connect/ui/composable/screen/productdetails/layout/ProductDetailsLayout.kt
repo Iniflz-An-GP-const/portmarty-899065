@@ -10,6 +10,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -20,6 +24,8 @@ import archive.portmarty.connect.ui.composable.screen.productdetails.button.AddT
 import archive.portmarty.connect.ui.composable.screen.productdetails.description.ProductDescription
 import archive.portmarty.connect.ui.composable.screen.productdetails.header.ProductHeader
 import archive.portmarty.connect.ui.composable.screen.productdetails.image.ProductDetailsImage
+import archive.portmarty.connect.ui.composable.screen.productdetails.quantity.MAX_QUANTITY
+import archive.portmarty.connect.ui.composable.screen.productdetails.quantity.MIN_QUANTITY
 import archive.portmarty.connect.ui.composable.screen.productdetails.snackbar.rememberAddToCartSnackbarState
 import archive.portmarty.connect.ui.composable.screen.productdetails.snackbar.AddedToCartSnackbar
 import archive.portmarty.connect.ui.theme.LocalDimens
@@ -28,10 +34,11 @@ import archive.portmarty.connect.ui.theme.LocalDimens
 fun ProductDetailsLayout(
     product: Product,
     modifier: Modifier = Modifier,
-    onAddToCart: () -> Unit,
+    onAddToCart: (quantity: Int) -> Unit,
 ) {
     val dimens = LocalDimens.current
     val snackbarState = rememberAddToCartSnackbarState()
+    var quantity by rememberSaveable { mutableIntStateOf(MIN_QUANTITY) }
 
     Column(
         modifier = modifier
@@ -87,8 +94,11 @@ fun ProductDetailsLayout(
         }
 
         AddToCartButton(
+            quantity = quantity,
+            isAdded = snackbarState.isVisible,
+            onQuantityChange = { quantity = it.coerceIn(MIN_QUANTITY, MAX_QUANTITY) },
             onClick = {
-                onAddToCart()
+                onAddToCart(quantity)
                 snackbarState.show()
             },
             modifier = Modifier.fillMaxWidth(),

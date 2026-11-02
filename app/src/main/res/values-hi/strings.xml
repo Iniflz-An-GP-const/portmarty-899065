@@ -70,7 +70,7 @@
     <string name="button_confirm_order_label">आदेश की पुष्टि</string>
     <string name="checkout_dialog_title">आपके ऑर्डर के लिए धन्यवाद!</string>
     <string name="checkout_success_message">आपका ऑर्डर सफलतापूर्वक दे दिया गया है. कृपया करके रुके रहिए; हमारी टीम शीघ्र ही आपसे संपर्क करेगी.</string>
-    <string name="checkout_dialog_confirm">हो गया</string>
+    <string name="checkout_dialog_confirm">मेरे ऑर्डर देखें</string>
     <string name="settings_screen_app_label">आवेदन</string>
     <string name="settings_screen_version_label">संस्करण</string>
     <string name="settings_screen_company_label">कंपनी</string>
@@ -79,4 +79,5 @@
     <string name="clear_card_dialog_text">क्या आप वाकई अपने कार्ट से सभी आइटम हटाना चाहते हैं?</string>
     <string name="button_confirm_clear_cart">पुष्टि करना</string>
     <string name="button_cancel_clear_cart">रद्द करना</string>
+    <string name="settings_screen_copyright">© %1$d %2$s. सर्वाधिकार सुरक्षित।</string>
 </resources>

@@ -1,6 +1,12 @@
 package archive.portmarty.connect.ui.composable.approot
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.windowInsetsTopHeight
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
@@ -16,6 +22,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hasRoute
@@ -29,6 +36,7 @@ import archive.portmarty.connect.ui.composable.approot.topbar.AppTopBar
 import archive.portmarty.connect.ui.composable.navigation.AppNavHost
 import archive.portmarty.connect.ui.composable.navigation.NavRoute
 import archive.portmarty.connect.ui.state.DataUiState
+import archive.portmarty.connect.ui.theme.Primary
 import archive.portmarty.connect.ui.theme.StatusBarIconsFor
 import archive.portmarty.connect.ui.viewmodel.AppViewModel
 import org.koin.androidx.compose.koinViewModel
@@ -95,25 +103,35 @@ fun AppRoot(
         }
     }
 
-    AppRootContent(
-        navController = navController,
-        currentDestination = currentDestination,
-        itemsInCart = itemsInCartState,
-        isCartNotEmpty = cartPopulatedState is DataUiState.Populated,
-        shouldShowTopBar = shouldShowTopBar,
-        shouldShowBottomBar = shouldShowBottomBar,
-        onClearCartIconClick = { shouldShowClearCartDialog = true },
-        onNavigateToRoute = onNavigateToRoute,
-        onNavigateBack = { navController.popBackStack() }
-    )
+    Box(modifier = Modifier.fillMaxSize()) {
+        AppRootContent(
+            navController = navController,
+            currentDestination = currentDestination,
+            itemsInCart = itemsInCartState,
+            isCartNotEmpty = cartPopulatedState is DataUiState.Populated,
+            shouldShowTopBar = shouldShowTopBar,
+            shouldShowBottomBar = shouldShowBottomBar,
+            onClearCartIconClick = { shouldShowClearCartDialog = true },
+            onNavigateToRoute = onNavigateToRoute,
+            onNavigateBack = { navController.popBackStack() }
+        )
 
-    if (shouldShowClearCartDialog) {
-        ClearCartDialog(
-            onDismiss = { shouldShowClearCartDialog = false },
-            onConfirm = {
-                viewModel.clearCart()
-                shouldShowClearCartDialog = false
-            }
+        if (shouldShowClearCartDialog) {
+            ClearCartDialog(
+                onDismiss = { shouldShowClearCartDialog = false },
+                onConfirm = {
+                    viewModel.clearCart()
+                    shouldShowClearCartDialog = false
+                }
+            )
+        }
+
+        Box(
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .fillMaxWidth()
+                .windowInsetsTopHeight(WindowInsets.statusBars)
+                .background(Primary)
         )
     }
 }

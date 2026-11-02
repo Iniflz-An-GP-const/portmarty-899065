@@ -17,6 +17,7 @@ data class OnboardingContent(
     @field:StringRes val titleRes: Int,
     @field:StringRes val descriptionRes: Int,
     val icons: List<ImageVector>,
+    val imageUrl: String,
 )
 
 val onboardingPagesContent = listOf(
@@ -24,11 +25,13 @@ val onboardingPagesContent = listOf(
         titleRes = R.string.page_discover_title,
         descriptionRes = R.string.page_discover_description,
         icons = listOf(Icons.Filled.Storefront, Icons.Filled.Search, Icons.Filled.FavoriteBorder),
+        imageUrl = "https://images.unsplash.com/photo-1724582586529-62622e50c0b3?w=800&q=80",
     ),
     OnboardingContent(
         titleRes = R.string.page_checkout_title,
         descriptionRes = R.string.page_checkout_description,
         icons = listOf(Icons.Filled.ShoppingCart, Icons.Filled.Lock),
+        imageUrl = "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
     ),
     OnboardingContent(
         titleRes = R.string.page_delivery_title,
@@ -38,5 +41,6 @@ val onboardingPagesContent = listOf(
             Icons.Filled.Notifications,
             Icons.Filled.CheckCircle
         ),
+        imageUrl = "https://images.unsplash.com/photo-1758523670564-d1d6a734dc0b?w=800&q=80",
     ),
 )

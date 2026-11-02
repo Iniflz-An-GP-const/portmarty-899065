@@ -70,7 +70,7 @@
     <string name="button_confirm_order_label">Konfirmasi Pesanan</string>
     <string name="checkout_dialog_title">Terima Kasih atas Pesanan Anda!</string>
     <string name="checkout_success_message">Pesanan Anda telah berhasil dilakukan. Mohon tunggu sebentar; tim kami akan segera menghubungi Anda.</string>
-    <string name="checkout_dialog_confirm">Selesai</string>
+    <string name="checkout_dialog_confirm">Ke Pesanan Saya</string>
     <string name="settings_screen_app_label">Aplikasi</string>
     <string name="settings_screen_version_label">Versi</string>
     <string name="settings_screen_company_label">Perusahaan</string>
@@ -79,4 +79,5 @@
     <string name="clear_card_dialog_text">Apakah Anda yakin ingin menghapus semua item dari keranjang Anda?</string>
     <string name="button_confirm_clear_cart">Mengonfirmasi</string>
     <string name="button_cancel_clear_cart">Membatalkan</string>
+    <string name="settings_screen_copyright">© %1$d %2$s. Hak cipta dilindungi.</string>
 </resources>

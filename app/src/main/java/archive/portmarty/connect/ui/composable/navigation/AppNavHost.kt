@@ -5,6 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navDeepLink
 import androidx.navigation.toRoute
 import archive.portmarty.connect.ui.composable.screen.cart.AVMCTCartScreen
 import archive.portmarty.connect.ui.composable.screen.checkout.AVMCTCheckoutScreen
@@ -59,7 +60,9 @@ fun AppNavHost(
             )
         }
 
-        composable<NavRoute.Home> {
+        composable<NavRoute.Home>(
+            deepLinks = listOf(navDeepLink { uriPattern = "portmarty://app/home" })
+        ) {
             AVMCTHomeScreen(
                 onNavigateToProductDetails = { id: Int ->
                     navController.navigate(
@@ -69,14 +72,18 @@ fun AppNavHost(
             )
         }
 
-        composable<NavRoute.ProductDetails> { backStackEntry ->
+        composable<NavRoute.ProductDetails>(
+            deepLinks = listOf(navDeepLink { uriPattern = "portmarty://app/product/{id}" })
+        ) { backStackEntry ->
             val productDetails: NavRoute.ProductDetails = backStackEntry.toRoute()
             AVMCTProductDetailsScreen(
                 productId = productDetails.id,
             )
         }
 
-        composable<NavRoute.Cart> {
+        composable<NavRoute.Cart>(
+            deepLinks = listOf(navDeepLink { uriPattern = "portmarty://app/cart" })
+        ) {
             AVMCTCartScreen(
                 onNavigateToCheckoutScreen = {
                     navController.navigate(NavRoute.Checkout)
@@ -84,7 +91,9 @@ fun AppNavHost(
             )
         }
 
-        composable<NavRoute.Checkout> {
+        composable<NavRoute.Checkout>(
+            deepLinks = listOf(navDeepLink { uriPattern = "portmarty://app/checkout" })
+        ) {
             AVMCTCheckoutScreen(
                 onNavigateToOrdersScreen = {
                     navController.navigate(NavRoute.Orders) {
@@ -94,11 +103,15 @@ fun AppNavHost(
             )
         }
 
-        composable<NavRoute.Orders> {
+        composable<NavRoute.Orders>(
+            deepLinks = listOf(navDeepLink { uriPattern = "portmarty://app/orders" })
+        ) {
             AVMCTOrdersScreen()
         }
 
-        composable<NavRoute.Settings> {
+        composable<NavRoute.Settings>(
+            deepLinks = listOf(navDeepLink { uriPattern = "portmarty://app/settings" })
+        ) {
             AVMCTSettingsScreen()
         }
     }

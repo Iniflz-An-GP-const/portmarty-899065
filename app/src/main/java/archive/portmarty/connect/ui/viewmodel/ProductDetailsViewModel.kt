@@ -31,11 +31,13 @@ class ProductDetailsViewModel(
         }
     }
 
-    fun addProductToCart() {
+    fun addProductToCart(quantity: Int) {
         viewModelScope.launch {
             val state = _productDetailState.value
             if (state is DataUiState.Populated) {
-                cartRepository.incrementProductQuantityOrAdd(state.data)
+                repeat(quantity) {
+                    cartRepository.incrementProductQuantityOrAdd(state.data)
+                }
             }
         }
     }

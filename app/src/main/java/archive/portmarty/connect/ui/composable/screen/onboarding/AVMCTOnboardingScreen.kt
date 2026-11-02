@@ -21,7 +21,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import archive.portmarty.connect.ui.composable.approot.LocalContentBottomPadding
 import archive.portmarty.connect.ui.composable.screen.onboarding.controls.OnboardingControls
-import archive.portmarty.connect.ui.composable.screen.onboarding.icon.OnboardingIcon
+import archive.portmarty.connect.ui.composable.screen.shared.ProductImage
+import archive.portmarty.connect.ui.theme.imageBorder
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.draw.clip
 import archive.portmarty.connect.ui.composable.screen.onboarding.text.OnboardingText
 import archive.portmarty.connect.ui.theme.LocalDimens
 import archive.portmarty.connect.ui.viewmodel.OnboardingViewModel
@@ -108,7 +112,17 @@ private fun OnboardingPage(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        OnboardingIcon(icons = content.icons)
+        val imageShape = RoundedCornerShape(dimens.cardCornerRadius)
+
+        ProductImage(
+            imageUrl = content.imageUrl,
+            contentDescription = null,
+            modifier = Modifier
+                .weight(1f, fill = false)
+                .aspectRatio(1f, matchHeightConstraintsFirst = true)
+                .clip(imageShape)
+                .imageBorder(imageShape),
+        )
 
         Spacer(modifier = Modifier.height(dimens.sectionGap))
 

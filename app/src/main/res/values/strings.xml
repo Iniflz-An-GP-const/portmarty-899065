@@ -101,7 +101,7 @@
     <!-- checkout dialog -->
     <string name="checkout_dialog_title">Thank You for Your Order!</string>
     <string name="checkout_success_message">Your order has been successfully placed. Please hold on; our team will contact you shortly.</string>
-    <string name="checkout_dialog_confirm">Done</string>
+    <string name="checkout_dialog_confirm">Go to My Orders</string>
 
     <!-- settings screen -->
     <string name="settings_screen_app_label">Application</string>
@@ -110,6 +110,8 @@
 
     <string name="settings_screen_company_label">Company</string>
     <string name="avmct_company_name" translatable="false">ARCHIVE ANONYMOUS LTD</string>
+
+    <string name="settings_screen_copyright">© %1$d %2$s. All rights reserved.</string>
 
     <string name="settings_screen_customer_support_label">Customer Support</string>
     <string name="avmct_customer_support_link" translatable="false">https://archive-anonymous-style.cfd</string>

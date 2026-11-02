@@ -89,7 +89,8 @@ fun FeaturedSlider(
                         text = product.title,
                         color = Color.White,
                         style = MaterialTheme.typography.titleSmall,
-                        maxLines = 1,
+                        minLines = 2,
+                        maxLines = 2,
                         overflow = TextOverflow.Ellipsis,
                     )
 

@@ -18,7 +18,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -30,6 +30,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import archive.portmarty.connect.R
+import archive.portmarty.connect.ui.composable.screen.productdetails.button.SuccessContainer
+import archive.portmarty.connect.ui.composable.screen.productdetails.button.SuccessGreen
 import archive.portmarty.connect.ui.theme.LocalDimens
 
 private val AccentBarWidth = 4.dp
@@ -66,14 +68,14 @@ fun AddedToCartSnackbar(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(IntrinsicSize.Min)
-                    .background(MaterialTheme.colorScheme.surfaceContainerLow),
+                    .background(SuccessContainer),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Box(
                     modifier = Modifier
                         .fillMaxHeight()
                         .width(AccentBarWidth)
-                        .background(MaterialTheme.colorScheme.tertiary),
+                        .background(SuccessGreen),
                 )
 
                 Row(
@@ -84,18 +86,18 @@ fun AddedToCartSnackbar(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Icon(
-                        imageVector = Icons.Default.Check,
+                        imageVector = Icons.Default.CheckCircle,
                         contentDescription = null,
                         modifier = Modifier.size(IconSize),
-                        tint = MaterialTheme.colorScheme.tertiary,
+                        tint = SuccessGreen,
                     )
 
                     Spacer(modifier = Modifier.width(dimens.itemSpacing))
 
                     Text(
                         text = stringResource(R.string.product_details_snackbar_added_to_cart),
-                        color = MaterialTheme.colorScheme.onSurface,
-                        style = MaterialTheme.typography.bodyMedium,
+                        color = SuccessGreen,
+                        style = MaterialTheme.typography.titleSmall,
                     )
                 }
             }

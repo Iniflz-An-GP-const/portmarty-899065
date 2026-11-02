@@ -28,6 +28,7 @@ import archive.portmarty.connect.R
 import archive.portmarty.connect.ui.theme.LocalDimens
 import archive.portmarty.connect.ui.theme.cardBorderStroke
 import archive.portmarty.connect.ui.theme.imageBorder
+import java.time.Year
 
 private val BannerHeight = 72.dp
 private val LogoSize = 48.dp
@@ -98,6 +99,20 @@ fun AppInfoCard(modifier: Modifier = Modifier) {
                 Text(
                     text = stringResource(R.string.avmct_app_version),
                     color = MaterialTheme.colorScheme.secondary,
+                    style = MaterialTheme.typography.bodySmall,
+                )
+            }
+
+            if (companyName.isNotBlank()) {
+                Spacer(modifier = Modifier.height(dimens.tightSpacing))
+
+                Text(
+                    text = stringResource(
+                        R.string.settings_screen_copyright,
+                        Year.now().value,
+                        companyName,
+                    ),
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     style = MaterialTheme.typography.bodySmall,
                 )
             }

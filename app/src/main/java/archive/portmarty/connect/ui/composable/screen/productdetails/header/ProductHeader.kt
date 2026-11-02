@@ -8,6 +8,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import archive.portmarty.connect.R
 import archive.portmarty.connect.data.model.Product
 import archive.portmarty.connect.ui.theme.LocalDimens
@@ -24,6 +25,8 @@ fun ProductHeader(
             text = product.title,
             color = MaterialTheme.colorScheme.onBackground,
             style = MaterialTheme.typography.headlineSmall,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
         )
 
         Spacer(modifier = Modifier.height(dimens.tightSpacing))

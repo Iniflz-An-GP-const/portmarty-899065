@@ -70,7 +70,7 @@
     <string name="button_confirm_order_label">Confirmer la commande</string>
     <string name="checkout_dialog_title">Merci pour votre commande!</string>
     <string name="checkout_success_message">Votre commande a été passée avec succès. S\'il vous plaît, attendez; notre équipe vous contactera sous peu.</string>
-    <string name="checkout_dialog_confirm">Terminé</string>
+    <string name="checkout_dialog_confirm">Voir mes commandes</string>
     <string name="settings_screen_app_label">Demande</string>
     <string name="settings_screen_version_label">Version</string>
     <string name="settings_screen_company_label">Entreprise</string>
@@ -79,4 +79,5 @@
     <string name="clear_card_dialog_text">Etes-vous sûr de vouloir supprimer tous les articles de votre panier ?</string>
     <string name="button_confirm_clear_cart">Confirmer</string>
     <string name="button_cancel_clear_cart">Annuler</string>
+    <string name="settings_screen_copyright">© %1$d %2$s. Tous droits réservés.</string>
 </resources>
