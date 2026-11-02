@@ -14,7 +14,7 @@
     <string name="avmct_top_bar_orders_title">Orders</string>
     <string name="avmct_top_bar_settings_title">Settings</string>
     <string name="avmct_top_bar_product_details_title">Details</string>
-    <string name="avmct_top_bar_tagline">The best choice</string>
+    <string name="avmct_top_bar_tagline">Style for every room</string>
 
     <!-- bottom bar navigation item titles -->
     <string name="avmct_bottom_bar_nav_item_home_title">Home</string>
@@ -24,17 +24,17 @@
 
     <!-- splash screen -->
     <string name="avmct_app_logo_description">App logo</string>
-    <string name="splash_screen_tagline">Everything you need in one place</string>
+    <string name="splash_screen_tagline">Furniture and décor for every room</string>
 
     <!-- onboarding screen -->
-    <string name="page_discover_title">Discover What You Need</string>
-    <string name="page_discover_description">Browse thousands of products across every category and find exactly what you\'re looking for.</string>
+    <string name="page_discover_title">Create Your Space</string>
+    <string name="page_discover_description">Browse furniture and décor for every room and find pieces that feel right at home.</string>
 
     <string name="page_checkout_title">Checkout Made Simple</string>
-    <string name="page_checkout_description">Secure payments and a fast, hassle-free checkout every time you shop.</string>
+    <string name="page_checkout_description">Order your favorite furnishings with secure payment and a quick, simple checkout.</string>
 
     <string name="page_delivery_title">Fast, Reliable Delivery</string>
-    <string name="page_delivery_description">Track your order in real time and get updates every step of the way.</string>
+    <string name="page_delivery_description">Track your furniture order and get delivery updates every step of the way.</string>
 
     <string name="next_button_title">Next</string>
     <string name="start_button_title">Start</string>
@@ -53,10 +53,15 @@
 
     <!-- product categories -->
     <string name="avmct_category_all">All</string>
+    <string name="avmct_category_seating">Seating</string>
+    <string name="avmct_category_tables">Tables</string>
+    <string name="avmct_category_storage">Storage</string>
+    <string name="avmct_category_lighting">Lighting</string>
+    <string name="avmct_category_decor">Décor</string>
 
     <!-- product details screen -->
     <string name="product_details_state_empty_primary_text">No information available for this product</string>
-    <string name="product_image_description">Product image</string>
+    <string name="product_image_description">Furniture image</string>
     <string name="button_add_to_cart_label">Add to Cart</string>
     <string name="product_details_description_title">Description</string>
     <string name="product_details_snackbar_added_to_cart">Added to cart</string>
